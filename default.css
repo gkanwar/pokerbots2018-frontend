@@ -36,25 +36,25 @@ body {
 #titlebar {
   margin-bottom: 10pt;
 }
-#leaderboard {
+.leaderboard {
   width: 500px;
   margin-left: auto; margin-right: auto;
   border-spacing: 0;
   border-collapse: collapse;
 }
-#leaderboard th {
+.leaderboard th {
   text-align: left;
   background-color: #D42E4A;
   color: white;
 }
-#leaderboard td, #leaderboard th {
+.leaderboard td, #leaderboard th {
   border: 1px solid #ddd;
   padding-top: 11px; padding-bottom: 11px;
   padding-left: 4px; padding-right: 4px;
 }
-#leaderboard tr:nth-child(odd) {
+.leaderboard tr:nth-child(odd) {
   background-color: white;
 }
-#leaderboard tr:nth-child(even) {
+.leaderboard tr:nth-child(even) {
   background-color: #efefef;
 }
