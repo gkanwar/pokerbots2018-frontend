@@ -1,0 +1,60 @@
+html {
+  background-color: white;
+}
+body {
+  width: 800px;
+  display: block;
+  margin-top: 0; margin-bottom: 0;
+  margin-left: auto; margin-right: auto;
+}
+.main {
+  margin-top: 0; margin-bottom: 0;
+  padding-top: 20pt; padding-left: 15pt; padding-right: 15pt; padding-bottom: 10pt;
+  background-color: #f9f9f9;
+}
+.heading {
+  padding-top: 5pt; padding-bottom: 5pt;
+  padding-left: 15pt; padding-right: 15pt;
+  margin-top: 0; margin-bottom: 0;
+  color: white;
+  background-color: #C41E3A;
+}
+.heading h1 {
+  display: inline-block;
+}
+.heading .status {
+  display: inline-block;
+  float: right;
+}
+.good {
+  font-weight: bold;
+}
+.bad {
+  font-weight: bold;
+  text-decoration: underline;
+}
+#titlebar {
+  margin-bottom: 10pt;
+}
+#leaderboard {
+  width: 500px;
+  margin-left: auto; margin-right: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+#leaderboard th {
+  text-align: left;
+  background-color: #D42E4A;
+  color: white;
+}
+#leaderboard td, #leaderboard th {
+  border: 1px solid #ddd;
+  padding-top: 11px; padding-bottom: 11px;
+  padding-left: 4px; padding-right: 4px;
+}
+#leaderboard tr:nth-child(odd) {
+  background-color: white;
+}
+#leaderboard tr:nth-child(even) {
+  background-color: #efefef;
+}
