@@ -35,6 +35,8 @@
 <head>
 <title>PokerBots <?echo $title;?></title>
 <link rel="stylesheet" type="text/css" href="default.css" />
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="plot.js"></script>
 </head>
 
 <?
