@@ -34,9 +34,11 @@
       die('Exceeded filesize limit ' . FILE_LIMIT . '.');
     }
     $dirName = UPLOAD_DIR . $name;
+    $umask_old = umask(0);
     if (!is_dir($dirName) && !mkdir($dirName, 0770)) {
       die('Could not create bot directory ' . $dirName . '.');
     }
+    umask($umask_old);
     $targetName = $dirName . '/bot';
     $backupName = $targetName . '_' . time() . '.bak';
     if (is_file($targetName)) {

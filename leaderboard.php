@@ -14,28 +14,26 @@
   $tid = (isset($_GET['tid']) && is_numeric($_GET['tid'])) ? (int)$_GET['tid'] : -1;
   $req = (isset($_GET['req']) ? $_GET['req'] : 'leaderboard');
   $possibleDir = TOURNAMENTS_DIR . $timestamp;
+  $rtSubpath = '/round' . $rid . '/table' . $tid . '/';
   if (is_dir($possibleDir)) {
     if ($req === 'leaderboard') {
-      $possibleFile = TOURNAMENTS_DIR . $timestamp . '/' . LEADERBOARD_FILE;
+      $possibleFile = $possibleDir . '/' . LEADERBOARD_FILE;
       maybeEchoFile($possibleFile, false);
     }
     else if ($req === 'stdout' && $rid > 0 && $tid > 0) {
-      $possibleFile = TOURNAMENTS_DIR . $timestamp . '/round' . $rid . '/table' . $tid . '/' .STDOUT_FILE;
+      $possibleFile = $possibleDir . $rtSubpath . STDOUT_FILE;
       maybeEchoFile($possibleFile, true);
     }
-    else if ($req === 'all_messages') {
-      echo "<p> all_messages.log.gz download not supported yet. </p>";
-    }
     else if ($req === 'player0' && $rid > 0 && $tid > 0) {
-      $possibleFile = TOURNAMENTS_DIR . $timestamp . '/round' . $rid . '/table' . $tid . '/player0.log';
+      $possibleFile = $possibleDir . $rtSubpath . 'player0.log';
       maybeEchoFile($possibleFile, true);
     }
     else if ($req === 'player1' && $rid > 0 && $tid > 0) {
-      $possibleFile = TOURNAMENTS_DIR . $timestamp . '/round' . $rid . '/table' . $tid . '/player1.log';
+      $possibleFile = $possibleDir . $rtSubpath . 'player1.log';
       maybeEchoFile($possibleFile, true);
     }
     else if ($req === 'player2' && $rid > 0 && $tid > 0) {
-      $possibleFile = TOURNAMENTS_DIR . $timestamp . '/round' . $rid . '/table' . $tid . '/player2.log';
+      $possibleFile = $possibleDir . $rtSubpath . 'player2.log';
       maybeEchoFile($possibleFile, true);
     }
   }
